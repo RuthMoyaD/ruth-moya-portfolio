@@ -1,0 +1,468 @@
+/* Variables CSS para la paleta de colores */
+:root {
+    --color-primary: #007ACC; /* Azul: Acento/Botones */
+    --color-secondary: #333333; /* Negro: Texto Principal */
+    --color-background-start: #F9F9FC; /* Blanco muy suave, casi puro */
+    --color-background-end: #F4F6F9; /* Gris muy muy suave */
+    --color-white: #FFFFFF; /* Blanco puro, usado para elementos que queremos destacar un poco más */
+    --color-glass-bg: rgba(255, 255, 255, 0.4); /* Fondo para Glassmorphism (sin cambios importantes) */
+    --transition-speed: 250ms;
+    --transition-ease: ease-in-out;
+}
+
+/* Base y Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-secondary);
+    
+    /* CAMBIO CLAVE 1: Aplicamos un degradado sutil al fondo general */
+    background: linear-gradient(to bottom right, var(--color-background-start), var(--color-background-end));
+    
+    transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color var(--transition-speed) var(--transition-ease);
+}
+
+a:hover {
+    color: #005A9C; /* Azul más oscuro en hover */
+}
+
+/* Estilo Glassmorphism Base */
+.glass-effect {
+    background: var(--color-glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) var(--transition-ease), box-shadow var(--transition-speed) var(--transition-ease);
+}
+
+/* Animación sutil de Levantamiento en Hover */
+.glass-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Navegación */
+header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.nav-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    /* Permite que los enlaces ocupen el espacio central */
+    flex-grow: 1; 
+    justify-content: center;
+    
+    /* Propiedades para la animación móvil */
+    transition: transform 0.3s ease-in; 
+}
+
+/* Estilos de los elementos de la lista (li) y enlaces (a) */
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: var(--color-secondary);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease);
+}
+
+.nav-links a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Controles Derecha (Idioma y Burger) */
+.nav-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el toggle de idioma y el menú burger */
+}
+
+/* Estilos del Botón Toggle de Idioma */
+.lang-toggle-btn {
+    padding: 6px 10px;
+    background-color: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease);
+}
+
+.lang-toggle-btn:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Botón Hamburguesa (solo visible en móvil) */
+.burger {
+    display: none; /* Por defecto invisible en desktop */
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Secciones Generales */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+/* Botones */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease);
+}
+
+.primary-btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+}
+
+.primary-btn:hover {
+    background-color: #005A9C;
+    border-color: #005A9C;
+    color: var(--color-white);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.secondary-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Sección Hero */
+.hero-section {
+    /* 1. Imagen de Fondo */
+    background-image: url('img/rmd-portfolio-hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Necesario para posicionar el filtro ::before */
+    
+    color: var(--color-white);
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeIn 1s var(--transition-ease);
+    overflow: hidden; /* Asegura que el pseudo-elemento no se desborde */
+}
+
+/* 2. Pseudo-elemento para el Filtro Oscuro (Efecto "Cristal Negro") */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Filtro Negro Semitransparente (Glass Look) */
+    background-color: rgba(0, 0, 0, 0.6); /* Negro con 50% de opacidad */
+    backdrop-filter: blur(0.5px); /* Glassmorphism ligero en la imagen */
+    -webkit-backdrop-filter: blur(0.5px);
+    z-index: 1; /* Coloca el filtro por debajo del contenido */
+}
+
+/* 3. Asegurar que el contenido (texto y botón) esté por encima del filtro */
+.hero-content {
+    position: relative;
+    z-index: 2; 
+}
+
+/* 4. Estilos de texto (sin cambios, ya estaban en blanco) */
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Sección About */
+.about-section p {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección Proyectos (Grid) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+    gap: 30px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+    overflow: hidden; /* Para contener la imagen */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    transition: opacity var(--transition-speed) var(--transition-ease);
+}
+
+.project-card:hover img {
+    opacity: 1;
+}
+
+.project-card h4 {
+    color: var(--color-secondary);
+    font-size: 1.3rem;
+    min-height: 50px; /* Asegura un espacio uniforme para títulos de diferente longitud */
+}
+
+.project-details p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.project-details strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.tool-badge {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.project-card .btn {
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+    align-self: flex-start;
+}
+
+/* Sección Contacto */
+.contact-section {
+    text-align: center;
+}
+
+.contact-links {
+    margin-top: 20px;
+}
+
+.contact-links a {
+    margin: 0 15px;
+    font-size: 2rem;
+}
+
+.contact-links a:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------- */
+/* RESPONSIVIDAD Y BREAKPOINTS */
+/* ---------------------------------- */
+
+/* Tablets (Grid: 2 columnas) */
+@media screen and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+/* Teléfonos Móviles (Grid: 1 columna, Menú Colapsable) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    /* Ocultar enlaces de navegación en móvil por defecto */
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 60px; /* Ajustar a la altura del header */
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--color-secondary);
+        transform: translateX(100%); /* Oculto por defecto: fuera de la pantalla */
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Mostrar menú cuando se activa (clase añadida con JavaScript) */
+    .nav-active {
+        transform: translateX(0); /* Muestra el menú deslizándose */
+    }
+
+    .nav-links li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 15px 25px;
+        color: var(--color-white);
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* El botón de idioma lo ocultamos en el contenedor principal y lo añadiremos en el burger si se desea, por simplicidad, lo ocultamos */
+    .lang-toggle-btn {
+        display: none; 
+    }
+    
+    .nav-right-controls {
+        gap: 0;
+    }
+
+    /* Mostrar el botón hamburguesa */
+    .burger {
+        display: block;
+    }
+    
+    /* Animación X del botón hamburguesa (requiere JS para añadir la clase 'toggle') */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-card h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Respetar la Preferencia de Movimiento Reducido */
+@media (prefers-reduced-motion: reduce) {
+    .glass-effect, 
+    .glass-effect:hover, 
+    .nav-links,
+    .burger div,
+    a, 
+    .btn,
+    .project-card img {
+        transition: none !important;
+        animation: none !important;
+    }
+}
