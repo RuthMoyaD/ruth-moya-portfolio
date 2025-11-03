@@ -1,6 +1,6 @@
 # Ruth Moya – Portfolio
 
-Personal portfolio built with **HTML, CSS, and JavaScript** to showcase my background, featured projects, and experience in data analytics and automation.
+Personal portfolio built with **HTML, CSS, and JavaScript**.
 
 ## Features
 - Responsive layout for desktop and mobile  
