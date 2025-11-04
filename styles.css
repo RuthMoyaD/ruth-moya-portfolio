@@ -220,13 +220,131 @@ box-shadow:  7px 7px 14px #9e9e9e,
 }
 .project-card:hover img{ opacity:1; }
 .project-card h4{ color:var(--color-secondary); font-size:1.3rem; min-height:50px; }
-.project-details p{ font-size:.95rem; margin-bottom:5px; }
+.project-details p{ font-size:.95rem; margin-bottom:20px; margin-top: 20px; }
 .project-details strong{ color:var(--color-primary); font-weight:600; }
 .tool-badge{
   display:inline-block; background-color:var(--color-primary); color:var(--color-white);
   padding:3px 8px; border-radius:5px; font-size:.8rem; font-weight:500; margin-right:5px; margin-bottom:5px;
 }
 .project-card .btn{ margin-top:auto; align-self:center; }
+
+/* ====== Case Study ====== */
+.cs-hero-section{
+  padding: 60px 0 20px;
+}
+.cs-hero{
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 3rem 2rem;
+  border-radius: 40px;
+  text-align: center;
+}
+.cs-hero__kicker{
+  font-weight: 700;
+  letter-spacing: .5px;
+  margin-bottom: .5rem;
+  color: var(--color-primary);
+}
+.cs-title{
+  font-size: clamp(1.6rem, 2.4vw + 1rem, 2.2rem);
+  line-height: 1.3;
+  margin: 0 auto .75rem;
+  color: var(--color-secondary);
+}
+.cs-subtitle{
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.badge-list{ display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; }
+.badge{
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.45rem .75rem; border-radius:999px;
+  background:#f3f4f7;
+  box-shadow: 6px 6px 12px #d0d0d0, -6px -6px 12px #ffffff;
+  font-size:.9rem; color:#444;
+}
+
+.cs-section{ margin-top: 20px; margin-bottom: 20px; }
+.neo-card{
+  background: var(--color-glass-bg);
+  border-radius: 40px;
+  padding: 2rem;
+  box-shadow: 20px 20px 60px #a0a0a0, -20px -20px 60px #ffffff;
+}
+.cs-two-col{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1.25rem;
+}
+.cs-h3{
+  margin-bottom:.35rem;
+  font-size:1.05rem;
+  color: var(--color-primary);
+}
+.cs-note{
+  margin-bottom: 1rem;
+  font-size: .95rem;
+  color:#555;
+}
+
+/* herramientas */
+.tools-list{ list-style:none; display:grid; gap:.6rem; padding-left:0; }
+.tools-list > li i{ margin-right:.5rem; color: var(--color-primary); }
+.tools-sublist{ list-style: disc inside; margin-top:.35rem; color:#555; }
+
+/* iframe Power BI responsivo */
+.embed-responsive{
+  width: 100%;
+  border-radius: 28px;
+  padding: 12px;
+}
+.embed-responsive iframe{
+  width: 100%;
+  height: clamp(420px, 70vh, 860px);
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 6px 6px 12px #d0d0d0, -6px -6px 12px #ffffff;
+  background: #fff;
+}
+
+/* tabla de fuentes */
+.table-wrap{ overflow-x:auto; }
+.data-table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #f7f7f7;
+  border-radius: 18px;
+  box-shadow: 10px 10px 24px rgba(0,0,0,.08), -10px -10px 24px rgba(255,255,255,.6);
+}
+.data-table thead th{
+  text-align: left;
+  padding: .9rem 1rem;
+  background: #eef1f5;
+  color: var(--color-secondary);
+}
+.data-table tbody td{
+  padding: .85rem 1rem;
+  border-top: 1px solid rgba(0,0,0,.05);
+}
+.data-table a{ font-weight:600; }
+
+/* Iconos con acento (solo para la página de Case Study) */
+.icon-amber,
+.icon-blue,
+.icon-teal{
+  /* degradado aplicado al texto del icono */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.08)); /* sutil */
+}
+
+.icon-amber{ background-image: linear-gradient(90deg,#ffb347,#ff7a18); }
+.icon-blue{  background-image: linear-gradient(90deg,#6aa8ff,#2f6de0); }
+.icon-teal{  background-image: linear-gradient(90deg,#57e3c1,#18a999); }
+.icon-pink{  background-image: linear-gradient(90deg,#de57e3,#a91891); }
 
 .contact-section{ text-align:center; }
 .contact-links{ margin-top:20px; }
@@ -333,6 +451,8 @@ footer{
   .about-section p{
     max-width:38ch; margin:0 auto; font-size:1rem; line-height:1.65; text-align:center;
   }
+  .cs-two-col{ grid-template-columns: 1fr; }
+  .neo-card{ border-radius: 26px; padding: 1.25rem; }
 }
 
 @media (prefers-reduced-motion:reduce){
