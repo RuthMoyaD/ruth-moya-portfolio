@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Case Study – Tasas, Inflación y Mercados (2018–2024) | Ruth Moya</title>
+    <title>Case Study – Interest Rates, Inflation & Markets (2018–2024) | Ruth Moya</title>
 
     <link rel="stylesheet" href="styles.css" />
 
@@ -11,21 +11,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <meta name="description" content="Case study: Efecto de tasas de interés e inflación global en criptomonedas y acciones tecnológicas (2018–2024). Dashboard Power BI embebido."/>
+    <meta name="description" content="Case study: Effect of interest rates and global inflation on cryptocurrencies and tech stocks (2018–2024). Embedded Power BI dashboard."/>
   </head>
 
   <body>
     <header>
       <nav class="navbar">
         <ul class="nav-links" id="nav-links">
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#projects">Proyectos</a></li>
-          <li><a href="index.html#about">Sobre Mí</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="index-en.html#hero">Home</a></li>
+          <li><a href="index-en.html#projects">Projects</a></li>
+          <li><a href="index-en.html#about">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="nav-right-controls">
-          <a href="case-study-en.html" id="lang-toggle" class="btn lang-toggle-btn" aria-label="Cambiar idioma a Inglés">EN</a>
+          <a href="case-study.html" id="lang-toggle" class="btn lang-toggle-btn" aria-label="Switch language to Spanish">ES</a>
           <div class="burger" id="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -39,42 +39,41 @@
       <section class="cs-hero-section">
         <div class="cs-hero glass-effect">
           <div class="cs-hero__kicker"><i class="fas fa-compass"></i> Case Study</div>
-          <h1 class="cs-title">El efecto de las tasas de interés y la inflación global en las criptomonedas y las acciones tecnológicas (2018–2024)</h1>
+          <h1 class="cs-title">The Effect of Interest Rates and Global Inflation on Cryptocurrencies and Tech Stocks (2018–2024)</h1>
           <p class="cs-subtitle">
-            Análisis macroeconómico y financiero en <strong>Power BI</strong> con datos públicos
+            Macroeconomic and financial analysis in <strong>Power BI</strong> using public data
             (FED, FRED, World Bank, Investing.com).
           </p>
           <div class="badge-list">
             <span class="badge"><i class="fas fa-coins icon-amber"></i> Bitcoin</span>
             <span class="badge"><i class="fas fa-chart-line icon-blue"></i> QQQ / Nasdaq-100</span>
-            <span class="badge"><i class="fas fa-percent icon icon-teal"></i> Tasas FED</span>
-            <span class="badge"><i class="fas fa-globe"></i> Inflación Global</span>
+            <span class="badge"><i class="fas fa-percent icon icon-teal"></i> FED Rates</span>
+            <span class="badge"><i class="fas fa-globe"></i> Global Inflation</span>
           </div>
         </div>
       </section>
 
       <section class="container cs-section">
         <article class="neo-card">
-          <h2 class="section-title">Contexto y objetivo del análisis</h2>
+          <h2 class="section-title">Context and Objective of the Analysis</h2>
           <div class="cs-two-col">
             <div>
-              <h3 class="cs-h3"><i class="fas fa-map-signs icon-amber"></i> Contexto</h3>
+              <h3 class="cs-h3"><i class="fas fa-map-signs icon-amber"></i> Context</h3>
               <p>
-                Este dashboard explora la relación entre las <strong>tasas de interés</strong>, la
-                <strong>inflación</strong> y los <strong>mercados financieros</strong> entre 2018 y 2024.
-                El foco principal está en los datos de EE. UU. (referencia global por el peso del dólar
-                y su impacto en la economía mundial), complementados con indicadores de
-                <em>inflación global</em> del Banco Mundial para una visión macro más amplia.
+                This dashboard explores the relationship between <strong>interest rates</strong>,
+                <strong>inflation</strong>, and <strong>financial markets</strong> between 2018 and 2024.
+                The main focus is on U.S. data (a global benchmark due to the dollar’s influence
+                on the world economy), complemented by <em>global inflation</em> indicators from
+                the World Bank for a broader macroeconomic perspective.
               </p>
             </div>
             <div>
-              <h3 class="cs-h3"><i class="fas fa-bullseye icon-blue"></i> Objetivo</h3>
+              <h3 class="cs-h3"><i class="fas fa-bullseye icon-blue"></i> Objective</h3>
               <p>
-                Entender cómo las decisiones de la <strong>Reserva Federal (FED)</strong> influyen en el
-                comportamiento de los <strong>activos de riesgo</strong>, especialmente
-                <strong>criptomonedas (Bitcoin)</strong> y <strong>acciones tecnológicas</strong>
-                (ETF Nasdaq-100, QQQ). Se observan puntos de inflexión entre política monetaria,
-                inflación e inversión en activos digitales.
+                To understand how decisions by the <strong>Federal Reserve (FED)</strong> affect the behavior
+                of <strong>risk assets</strong>, especially <strong>cryptocurrencies (Bitcoin)</strong> and
+                <strong>technology stocks</strong> (ETF Nasdaq-100, QQQ). Turning points between monetary
+                policy, inflation, and investment in digital assets are analyzed.
               </p>
             </div>
           </div>
@@ -88,7 +87,7 @@
           <div class="embed-responsive glass-effect">
   <img
     src="img/mockup informe 1.png"
-    alt="Vista del dashboard Power BI"
+    alt="Power BI Dashboard View"
     style="
       width:100%;
       height:auto;
@@ -104,16 +103,16 @@
   <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
     <!-- PBIX -->
     <a class="btn secondary-btn"
-       href="https://github.com/TU_USUARIO/TU_REPO/releases/latest/download/dashboard.pbix"
+       href="https://github.com/YOUR_USER/YOUR_REPO/releases/latest/download/dashboard.pbix"
        download>
-      Descargar PBIX
+      Download PBIX
     </a>
 
     <!-- PDF -->
     <a class="btn secondary-btn"
-       href="https://github.com/TU_USUARIO/TU_REPO/releases/latest/download/dashboard.pdf"
+       href="https://github.com/YOUR_USER/YOUR_REPO/releases/latest/download/dashboard.pdf"
        target="_blank" rel="noopener">
-      Descargar PDF
+      Download PDF
     </a>
   </div>
 </div>
@@ -122,11 +121,11 @@
 
       <section class="container cs-section">
         <article class="neo-card">
-          <h2 class="section-title">Herramientas utilizadas</h2>
+          <h2 class="section-title">Tools Used</h2>
           <ul class="tools-list">
-            <li><i class="fas fa-chart-pie icon-teal"></i> <strong>Power BI</strong> – limpieza, modelado y visualización</li>
-            <li><i class="fas fa-file-excel icon-amber"></i> <strong>Microsoft Excel / Power Query</strong> – preparación y unión de datasets</li>
-            <li><i class="fas fa-database icon-blue"></i> <strong>Fuentes de datos públicas</strong>:
+            <li><i class="fas fa-chart-pie icon-teal"></i> <strong>Power BI</strong> – cleaning, modeling, and visualization</li>
+            <li><i class="fas fa-file-excel icon-amber"></i> <strong>Microsoft Excel / Power Query</strong> – dataset preparation and merging</li>
+            <li><i class="fas fa-database icon-blue"></i> <strong>Public Data Sources</strong>:
               <ul class="tools-sublist">
                 <li>FRED (Federal Reserve Economic Data)</li>
                 <li>World Bank Data</li>
@@ -139,31 +138,31 @@
 
       <section class="container cs-section">
         <article class="neo-card">
-          <h2 class="section-title">Fuentes de datos</h2>
+          <h2 class="section-title">Data Sources</h2>
 
           <div class="table-wrap">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>Fuente</th>
-                  <th>Descripción</th>
-                  <th>Enlace</th>
+                  <th>Source</th>
+                  <th>Description</th>
+                  <th>Link</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>FRED</td>
-                  <td>Tasa de fondos federales y CPI (inflación USA)</td>
+                  <td>Federal Funds Rate and CPI (U.S. inflation)</td>
                   <td><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">fred.stlouisfed.org</a></td>
                 </tr>
                 <tr>
                   <td>World Bank Data</td>
-                  <td>Inflación global (CPI, series por país y mundial)</td>
+                  <td>Global inflation (CPI, by country and worldwide)</td>
                   <td><a href="https://data.worldbank.org" target="_blank" rel="noopener">data.worldbank.org</a></td>
                 </tr>
                 <tr>
                   <td>Investing.com</td>
-                  <td>Precios de BTC y QQQ (históricos y en tiempo real)</td>
+                  <td>BTC and QQQ prices (historical and real-time)</td>
                   <td><a href="https://www.investing.com" target="_blank" rel="noopener">investing.com</a></td>
                 </tr>
               </tbody>
@@ -175,13 +174,13 @@
 
       <section id="contact" class="contact-section">
         <div class="container contact-container">
-          <h3 class="section-title">Contacto</h3>
-          <p>Puedes encontrarme aquí, estaré encantada de conversar.</p>
+          <h3 class="section-title">Contact</h3>
+          <p>You can find me here — I’ll be happy to chat.</p>
           <div class="contact-links">
             <a href="https://www.linkedin.com/in/ruth-md/" target="_blank" aria-label="LinkedIn">
               <i class="fab fa-linkedin fa-2x"></i>
             </a>
-            <a href="mailto:ruth.moya.dantas@gmail.com" aria-label="Correo Electrónico">
+            <a href="mailto:ruth.moya.dantas@gmail.com" aria-label="Email">
               <i class="fas fa-envelope fa-2x"></i>
             </a>
           </div>
@@ -207,7 +206,7 @@
         openBtn.addEventListener('click', (e) => {
           e.preventDefault();
           const url = iframe.getAttribute('src');
-          if (url && url !== '#' && url !== 'https://app.powerbi.com/view?r=TU_EMBED_ID') {
+          if (url && url !== '#' && url !== 'https://app.powerbi.com/view?r=YOUR_EMBED_ID') {
             window.open(url, '_blank', 'noopener');
           }
         });
