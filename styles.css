@@ -228,7 +228,6 @@ box-shadow:  7px 7px 14px #9e9e9e,
 }
 .project-card .btn{ margin-top:auto; align-self:center; }
 
-/* ====== Case Study ====== */
 .cs-hero-section{
   padding: 60px 0 20px;
 }
@@ -288,12 +287,10 @@ box-shadow:  7px 7px 14px #9e9e9e,
   color:#555;
 }
 
-/* herramientas */
 .tools-list{ list-style:none; display:grid; gap:.6rem; padding-left:0; }
 .tools-list > li i{ margin-right:.5rem; color: var(--color-primary); }
 .tools-sublist{ list-style: disc inside; margin-top:.35rem; color:#555; }
 
-/* iframe Power BI responsivo */
 .embed-responsive{
   width: 100%;
   border-radius: 28px;
@@ -308,7 +305,6 @@ box-shadow:  7px 7px 14px #9e9e9e,
   background: #fff;
 }
 
-/* tabla de fuentes */
 .table-wrap{ overflow-x:auto; }
 .data-table{
   width: 100%;
@@ -330,11 +326,9 @@ box-shadow:  7px 7px 14px #9e9e9e,
 }
 .data-table a{ font-weight:600; }
 
-/* Iconos con acento (solo para la página de Case Study) */
 .icon-amber,
 .icon-blue,
 .icon-teal{
-  /* degradado aplicado al texto del icono */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

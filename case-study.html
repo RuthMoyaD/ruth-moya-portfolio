@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Case Study – Tasas, Inflación y Mercados (2018–2024) | Ruth Moya</title>
 
-    <!-- estilos existentes -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- iconos -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -17,7 +15,6 @@
   </head>
 
   <body>
-    <!-- NAVBAR (igual que en tu index) -->
     <header>
       <nav class="navbar">
         <ul class="nav-links" id="nav-links">
@@ -39,7 +36,6 @@
     </header>
 
     <main>
-      <!-- HERO/INTRO DEL CASE STUDY -->
       <section class="cs-hero-section">
         <div class="cs-hero glass-effect">
           <div class="cs-hero__kicker"><i class="fas fa-compass"></i> Case Study</div>
@@ -57,10 +53,6 @@
         </div>
       </section>
 
-      <!-- 1) TITULO DEL PROYECTO (ya está arriba) + subtítulo -->
-      <!-- ya cubierto por h1 + p de arriba -->
-
-      <!-- 2) CONTEXTO Y OBJETIVO (dos párrafos cortos) -->
       <section class="container cs-section">
         <article class="neo-card">
           <h2 class="section-title">Contexto y objetivo del análisis</h2>
@@ -89,7 +81,6 @@
         </article>
       </section>
 
-      <!-- (IFRAME) DASHBOARD EMBEBIDO -->
       <section class="container cs-section">
         <article class="neo-card">
           <h2 class="section-title">Dashboard interactivo</h2>
@@ -99,8 +90,6 @@
           </p>
 
           <div class="embed-responsive glass-effect">
-            <!-- 🔁 Reemplaza el valor de "src" con tu URL pública de Power BI -->
-            <!-- Ejemplo: https://app.powerbi.com/view?r=TU_EMBED_ID -->
             <iframe
               title="Power BI – Tasas, Inflación y Mercados"
               src="https://app.powerbi.com/view?r=TU_EMBED_ID"
@@ -111,7 +100,6 @@
         </article>
       </section>
 
-      <!-- 3) HERRAMIENTAS UTILIZADAS -->
       <section class="container cs-section">
         <article class="neo-card">
           <h2 class="section-title">Herramientas utilizadas</h2>
@@ -129,8 +117,6 @@
         </article>
       </section>
 
-
-      <!-- 4) FUENTES DE DATOS (con enlaces) -->
       <section class="container cs-section">
         <article class="neo-card">
           <h2 class="section-title">Fuentes de datos</h2>
@@ -167,7 +153,6 @@
         </article>
       </section>
 
-      <!-- CONTACTO (idéntico al tuyo) -->
       <section id="contact" class="contact-section">
         <div class="container contact-container">
           <h3 class="section-title">Contacto</h3>
@@ -184,13 +169,11 @@
       </section>
     </main>
 
-    <!-- FOOTER (igual) -->
     <footer>
       <p>&copy; Ruth Moya Dantas 2025</p>
     </footer>
 
     <script>
-      // menú burger (igual que en tu index)
       const burger = document.getElementById('burger');
       const navLinks = document.getElementById('nav-links');
       burger?.addEventListener('click', () => {
@@ -198,7 +181,6 @@
         burger.classList.toggle('toggle');
       });
 
-      // abrir el mismo src del iframe en nueva pestaña
       const openBtn = document.getElementById('open-pbi');
       const iframe = document.querySelector('.embed-responsive iframe');
       if (openBtn && iframe) {
