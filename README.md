@@ -14,4 +14,4 @@
 ---
 
 © 2025 **Ruth Moya Dantas**  
-[GitHub Profile](https://github.com/RuthMoyaD)
+[GitHub Profile](www.ruthmoya.com)
